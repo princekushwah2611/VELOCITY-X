@@ -2,6 +2,21 @@
   "name": "velocity-x",
   "version": "1.0.0",
   "private": true,
+  "description": "VELOCITY X — Feel the Motion. Control the Experience. High-performance scroll-driven automotive landing page engineered with Next.js, GSAP ScrollTrigger, and Tailwind CSS.",
+  "homepage": "https://princekushwah2611.github.io/VELOCITY-X/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/princekushwah2611/VELOCITY-X.git"
+  },
+  "keywords": [
+    "gsap",
+    "scrolltrigger",
+    "nextjs",
+    "tailwindcss",
+    "automotive",
+    "motion-design",
+    "creative-development"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
