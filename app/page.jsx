@@ -1,26 +1,42 @@
+'use client';
+
+import { useState } from 'react';
+import SmoothScroll from '../components/system/SmoothScroll';
+import CapabilityGate from '../components/system/CapabilityGate';
+import Loader from '../components/dom/Loader';
 import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import EngineeringSection from '../components/EngineeringSection';
+import HeroSection from '../components/dom/HeroSection';
+import IntroSection from '../components/dom/IntroSection';
 import SpecsSection from '../components/SpecsSection';
-import Footer from '../components/Footer';
+import Footer from '../components/dom/Footer';
 
 export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
-    <main className="min-h-screen bg-[#090909] text-white selection:bg-[#D6FF5F] selection:text-black">
-      {/* Fixed top navigation */}
-      <Navbar />
+    <SmoothScroll>
+      <main className="min-h-screen bg-[#050505] text-white selection:bg-[#c6ff00] selection:text-black relative overflow-x-hidden">
+        {/* Real-time WebGL 3D Canvas / Capability Gate */}
+        <CapabilityGate />
 
-      {/* Hero section with GSAP ScrollTrigger car animation */}
-      <HeroSection />
+        {/* Branded Asset & Shader Loader (FR-02) */}
+        <Loader onLoaded={() => setIsLoaded(true)} />
 
-      {/* Below-the-fold complementary aerodynamic architecture section */}
-      <EngineeringSection />
+        {/* Minimal Navigation with Telemetry */}
+        <Navbar />
 
-      {/* Interactive telemetry specs matrix & drive mode switcher */}
-      <SpecsSection />
+        {/* Pinned 5-Chapter Hero Section (FR-01 to FR-06) */}
+        <HeroSection isLoaded={isLoaded} />
 
-      {/* Project footer */}
-      <Footer />
-    </main>
+        {/* Below-the-fold statement section (FR-13) */}
+        <IntroSection />
+
+        {/* Interactive specs matrix */}
+        <SpecsSection />
+
+        {/* Footer with credits and licensing (FR-14) */}
+        <Footer />
+      </main>
+    </SmoothScroll>
   );
 }

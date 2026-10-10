@@ -1,62 +1,69 @@
 # VELOCITY X — Feel the Motion. Control the Experience.
+### Product Requirements Document v2.0 (Full 3D Edition)
+*By @Prince singh kushwah*
 
-A premium, high-performance scroll-driven automotive landing page engineered with **Next.js (App Router)**, **GSAP & ScrollTrigger**, and **Tailwind CSS**. 
+A cinematic, scroll-directed 3D automotive campaign engineered with **Next.js (App Router)**, **Three.js**, **React Three Fiber (R3F)**, **GSAP ScrollTrigger**, and **Lenis Smooth Scroll**.
 
-Built for modern browsers and pre-configured for automated **GitHub Pages** deployment via static export.
+Designed for 60 fps rendering on desktop, responsive performance on mobile, and automated static export deployment to **GitHub Pages**.
 
-Inspired by the interaction dynamics of the [ITZFIZZ car-scroll-animation](https://paraschaturvedi.github.io/car-scroll-animation) reference, elevated with a custom dark editorial luxury aesthetic and real-time kinetic telemetry.
-
----
-
-## 🏎️ Experience & Features
-
-- **Cinematic Pinned Hero Section (`FR-01`)**
-  - Full-screen first viewport with high-contrast editorial typography.
-  - Large letter-spaced headline: `WELCOME ITZFIZZ` with character-by-character illumination synchronized to vehicle traversal.
-  - Transparent-background McLaren 720S automotive visual positioned along an asphalt and carbon telemetry track.
-  - Real-time live HUD speed readout calculating simulated telemetry from scroll velocity (0 to 348 km/h).
-
-- **Intro Animations (`FR-02`)**
-  - Page-load reveal animation powered by GSAP with vertical displacement (`y: 35 -> 0`), staggered letter reveals, and restrained cubic easing (`power3.out`).
-  - Staggered sequence for all four telemetry metrics cards.
-  - Zero layout shift and hardware-accelerated GPU transforms (`will-change: transform`).
-
-- **Scroll-Driven Car Animation (`FR-03`)**
-  - Native GSAP ScrollTrigger pinning with scrub synchronization (`scrub: 0.8`).
-  - Proportional horizontal vehicle translation across the screen track with subtle aerodynamic elevation changes.
-  - Electric lime (`#D6FF5F`) dynamic velocity energy trail expanding behind the rear diffuser.
-  - Bidirectional scrub: naturally and smoothly reverses when scrolling upwards.
-  - Smooth unpin release leading into the below-the-fold content.
-
-- **Illustrative Demonstration Metrics**
-  - **58%** — Increase in pickup point usage
-  - **23%** — Reduction in customer phone calls
-  - **27%** — Improvement in pickup experience
-  - **40%** — Reduction in delivery friction
-  - Checkpoint tracking (S-01 to S-04): Cards actively illuminate with electric lime accents as the vehicle crosses their respective track sectors.
-
-- **Below-The-Fold Complementary Sections (`FR-04`)**
-  - **Aerodynamic Architecture**: Editorial manifesto with an interactive carbon hypercar side-profile inspection view and hotspot callouts (Ground Venturi, T1000 Monocoque, Active Airbrake).
-  - **Telemetry Matrix & Drivetrain Profiles**: Interactive Drive Mode switcher (`TRACK`, `SPORT GT`, `HYPER-KINETIC`, `STEALTH SILENT`) updating live 0-100 km/h, top speed, horsepower, lateral G, downforce, and regenerative braking metrics.
-
-- **Responsive & Accessible Design (`FR-05`)**
-  - Optimized for desktop, laptop, tablet, and mobile viewports.
-  - Prevents horizontal overflow across all breakpoints.
-  - Full support for `prefers-reduced-motion` to ensure an accessible experience without scroll trapping.
+🔗 **Live Deployment:** [https://princekushwah2611.github.io/VELOCITY-X/](https://princekushwah2611.github.io/VELOCITY-X/)  
+📁 **GitHub Repository:** [https://github.com/princekushwah2611/VELOCITY-X](https://github.com/princekushwah2611/VELOCITY-X)
 
 ---
 
-## 🛠️ Technology Stack
+## 🏎️ What Changed in v2.0
 
-| Technology | Purpose |
-| :--- | :--- |
-| **Next.js 14** (App Router) | React Framework, static site generation, and export |
-| **React 18** | Modular UI components & client-side state |
-| **Tailwind CSS 3** | Responsive utility styling & custom automotive color system |
-| **GSAP 3** | High-performance animation engine |
-| **GSAP ScrollTrigger** | Scroll-synchronized scrub, pinning, and viewport triggers |
-| **Lucide React** | Sleek geometric interface icons |
-| **GitHub Actions** | Automated CI/CD deployment to GitHub Pages |
+| Area | v1.0 | v2.0 (Full 3D Edition) |
+| :--- | :--- | :--- |
+| **Car Visual** | 2D transparent PNG | Real-time 3D hypercar rendered in WebGL with MeshPhysicalMaterial clearcoat |
+| **Camera** | Flat static viewport | Scroll-directed camera rig: orbit, dolly, tracking shots, low-angle detail |
+| **Scroll Engine** | Single pinned tween | 5-Chapter master timeline synchronizing camera, vehicle, lighting, and DOM |
+| **Interaction** | Scroll only | Scroll scrub, pointer parallax, drag-to-orbit, bespoke paint livery switcher |
+| **Audio** | Silent | Synthesized Web Audio twin-turbo engine hum reactive to scroll velocity |
+| **Rendering** | CSS only | Hardware-accelerated Three.js render loop, dynamic lime rim lighting |
+| **Quality Control**| Basic responsive CSS | Device capability gate, DPR capping, and graceful Static fallback |
+
+---
+
+## 🎬 5-Chapter Scroll Choreography
+
+The hero is a pinned stage with a scrubbed master timeline driving five distinct chapters:
+
+1. **Chapter 01 // IGNITION (0.00 – 0.20)**
+   - Front three-quarter angle with slow dolly-in.
+   - Headlights fade on and electric lime rim lighting ramps up.
+   - Initial headline (`WELCOME ITZFIZZ`) and statistics reveal, then gently fade as drive engages.
+
+2. **Chapter 02 // LAUNCH (0.20 – 0.45)**
+   - Camera swings to a dynamic side-profile tracking shot.
+   - Vehicle accelerates across frame with synchronized axle wheel spin.
+   - Speed HUD counts up from 0 to 348 km/h.
+
+3. **Chapter 03 // AERO LAB (0.45 – 0.65)**
+   - Low-angle orbit around front wheel, carbon splitter, and NACA ducts.
+   - Telemetry callouts reveal active downforce (620 kg) and torsional stiffness (50,000 Nm/deg).
+
+4. **Chapter 04 // REVEAL (0.65 – 0.85)**
+   - Sweeping orbit to rear three-quarter; brake lightblades flare.
+   - Interactive paint switcher appears (Electric Lime, Stealth Carbon, Apex White, Rosso Corsa, Liquid Chrome).
+   - Drag-to-orbit enabled with spring return.
+
+5. **Chapter 05 // RELEASE (0.85 – 1.00)**
+   - High wide cinematic shot as lighting settles into quiet blue-black.
+   - Hero smoothly unpins and transitions into the below-the-fold statement section.
+
+---
+
+## 🛠️ Technology Stack & Zero-Rerender Architecture
+
+- **Next.js 14 (App Router)**: Static site generation and export (`output: 'export'`).
+- **Three.js & @react-three/fiber (R3F)**: Declarative WebGL scene graph.
+- **GSAP 3 & ScrollTrigger**: Scroll scrubber and master pinning timeline.
+- **Lenis**: Inertial smooth scroll linked directly to GSAP's ticker (`lagSmoothing(0)`).
+- **Web Audio API**: Real-time synthesized engine harmonics without external audio file bloat.
+- **Tailwind CSS**: Dark automotive design system (`#050505` void, `#c6ff00` electric lime).
+
+> **Integration Rule:** GSAP owns the scroll timeline and writes to a shared mutable progress store (`lib/progressStore.js`). R3F reads from this store in `useFrame` and updates Three.js objects directly. React state is **never** re-rendered during scrolling, guaranteeing smooth 60 fps scrub.
 
 ---
 
@@ -64,121 +71,76 @@ Inspired by the interaction dynamics of the [ITZFIZZ car-scroll-animation](https
 
 ```text
 VELOCITY X/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Pages CI/CD workflow
 ├── app/
-│   ├── globals.css             # Tailwind directives, grid background, and glow effects
-│   ├── layout.jsx              # App layout, viewport settings, and SEO metadata
-│   └── page.jsx                # Main page composition
+│   ├── layout.jsx              # Viewport, metadata, typography
+│   ├── page.jsx                # Page composition & coordinate wrapper
+│   └── globals.css             # Design tokens (--bg: #050505, --accent: #c6ff00)
 ├── components/
-│   ├── Navbar.jsx              # Responsive header with live scroll percentage HUD
-│   ├── HeroSection.jsx         # Pinned viewport with GSAP scrubbed car animation
-│   ├── StatsCard.jsx           # Reusable telemetry statistics card with active states
-│   ├── EngineeringSection.jsx  # Complementary aero section with interactive hotspots
-│   ├── SpecsSection.jsx        # Drive mode selector and live specs matrix
-│   └── Footer.jsx              # Project credits, stack badges, and back-to-top
+│   ├── dom/
+│   │   ├── Navbar.jsx          # Header with live scroll HUD
+│   │   ├── HeroSection.jsx     # Pinned 5-chapter master timeline
+│   │   ├── StatsCard.jsx       # Telemetry metrics cards (58%, 23%, 27%, 40%)
+│   │   ├── ChapterHud.jsx      # Chapter counter & live speed readout
+│   │   ├── PaintSwitcher.jsx   # Accessible bespoke paint livery switcher
+│   │   ├── SoundToggle.jsx     # Engine synthesizer mute toggle
+│   │   ├── IntroSection.jsx    # Below-the-fold statement & blueprint
+│   │   └── Loader.jsx          # Branded asset preloader
+│   ├── three/
+│   │   ├── SceneCanvas.jsx     # Master WebGL Canvas with pointer tracking
+│   │   ├── CarModel.jsx        # 3D Hypercar with clearcoat paint & spinning wheels
+│   │   ├── CameraRig.jsx       # Damped camera keyframe interpolator
+│   │   ├── Lights.jsx          # Key light & dynamic lime rim light
+│   │   └── Floor.jsx           # Matte ground plane with cyber grid
+│   └── system/
+│       ├── CapabilityGate.jsx  # WebGL & reduced-motion fallback switch
+│       └── SmoothScroll.jsx    # Unified Lenis + ScrollTrigger ticker
+├── lib/
+│   ├── content.js              # Centralized copy, stats, and chapters
+│   ├── scrollConfig.js         # 5-chapter camera and car keyframes
+│   ├── progressStore.js        # Shared mutable progress ref
+│   ├── audioEngine.js          # Web Audio oscillator synthesizer
+│   └── capabilities.js         # Device tier & WebGL detector
 ├── public/
-│   ├── .nojekyll               # GitHub Pages compatibility flag (preserves _next/)
-│   └── images/
-│       ├── mclaren-720s.png    # Transparent top-view McLaren 720S asset
-│       └── velocity-x-profile.jpg # Cinematic carbon hypercar profile asset
-├── utils/
-│   └── assetPath.js            # Path resolver supporting GitHub Pages basePath
-├── next.config.mjs             # Static export and configurable basePath settings
-├── tailwind.config.js          # Design system: electric lime (#D6FF5F), deep black (#090909)
-├── postcss.config.mjs          # PostCSS configuration
-├── package.json                # Project dependencies and scripts
-└── README.md                   # Comprehensive documentation
+│   ├── .nojekyll               # Preserves _next/ static chunks on GitHub Pages
+│   └── images/                 # Optimized visual assets
+└── .github/workflows/
+    └── deploy.yml              # Automated GitHub Pages CI/CD pipeline
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
-- Node.js 18.17+ or 20+
-- npm, pnpm, or yarn
-
-### 1. Installation
-
-Clone or open the repository directory and install dependencies:
-
 ```bash
-cd "VELOCITY X"
+# 1. Install dependencies
 npm install
-```
 
-### 2. Development Server
-
-Start the local development server:
-
-```bash
+# 2. Run local development server
 npm run dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) (or the port indicated in terminal) in your browser.
-
-### 3. Production Build & Static Export
-
-Generate the static export in the `./out` directory:
-
-```bash
+# 3. Test production static export
 npm run build
 ```
 
-The exported HTML, CSS, JavaScript, and assets will be output to `./out`.
-
 ---
 
-## 🌐 GitHub Pages Deployment Guide
+## 🌐 GitHub Pages Deployment
 
-This project is fully configured for automated deployment to **GitHub Pages** using GitHub Actions.
+The project is pre-configured with a GitHub Actions workflow (`.github/workflows/deploy.yml`):
 
-### Step 1: Push Code to GitHub
-
-1. The remote repository has been configured:
+1. **Push to GitHub:**
    ```bash
-   git remote add origin https://github.com/princekushwah2611/VELOCITY-X.git
-   git branch -M main
-   git push -u origin main
+   git add .
+   git commit -m "feat(v2.0): implement full 3D real-time scene with R3F and GSAP"
+   git push origin main
    ```
-
-### Step 2: Enable GitHub Pages in Repository Settings
-
-1. On GitHub, navigate to **Settings** > **Pages** of [`princekushwah2611/VELOCITY-X`](https://github.com/princekushwah2611/VELOCITY-X).
-2. Under **Build and deployment** > **Source**, select:
-   - **GitHub Actions**
-3. The `.github/workflows/deploy.yml` workflow will automatically trigger on push to `main`.
-4. Once completed, your live site will be available at:
-   ```text
-   https://princekushwah2611.github.io/VELOCITY-X/
-   ```
-
-### Base Path Handling
-
-The application dynamically detects the repository name in the GitHub Actions workflow using `NEXT_PUBLIC_BASE_PATH`:
-- If deployed to a project repository (`https://username.github.io/repo-name/`), `NEXT_PUBLIC_BASE_PATH` is automatically set to `/repo-name`.
-- If deployed to a custom domain or user page (`https://username.github.io/`), `NEXT_PUBLIC_BASE_PATH` remains empty (`""`).
-- All image assets and routes utilize `getAssetPath()` to prevent broken paths.
+2. **Enable GitHub Pages:**
+   - In GitHub Settings &rarr; **Pages**, select **GitHub Actions** as the source.
+   - The workflow automatically runs static export with `NEXT_PUBLIC_BASE_PATH=/VELOCITY-X`.
 
 ---
 
-## 🧪 Testing & Verification Checklist
+## 📄 Licensing & 3D Attribution
 
-- [x] **Hero Section Viewport**: Fills initial viewport with letter-spaced `WELCOME ITZFIZZ` headline.
-- [x] **Page Load Intro**: Smooth vertical entry and staggered reveal for headline and metrics.
-- [x] **Scroll Synchronization**: Car moves horizontally on scrub with dynamic velocity trail and telemetry updates.
-- [x] **Bidirectional Scroll**: Smoothly reverses when scrolling upward.
-- [x] **Hero Pin & Release**: Pinned hero releases cleanly into the aerodynamic below-the-fold section.
-- [x] **Responsive Layouts**: Tested across mobile, tablet, laptop, and desktop viewports without overflow.
-- [x] **Motion Accessibility**: Respects `prefers-reduced-motion` settings.
-- [x] **Static Export**: Clean `next build` static export into `./out` with zero warnings.
-- [x] **GitHub Pages Compatibility**: Includes `public/.nojekyll`, base path support, and GitHub Actions workflow.
-
----
-
-## 📄 License
-
-MIT &copy; 2026 VELOCITY X. Developed for frontend development evaluation.
+- **Codebase:** MIT &copy; 2026 VELOCITY X. Engineered by Prince Singh Kushwah.
+- **3D Asset Architecture:** Original procedural automotive geometry built in Three.js / CC0 Public Domain.
