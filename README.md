@@ -136,30 +136,24 @@ The exported HTML, CSS, JavaScript, and assets will be output to `./out`.
 
 This project is fully configured for automated deployment to **GitHub Pages** using GitHub Actions.
 
-### Step 1: Create a GitHub Repository
+### Step 1: Push Code to GitHub
 
-1. Initialize git and commit the codebase (if not already done):
+1. The remote repository has been configured:
    ```bash
-   git add .
-   git commit -m "feat: complete VELOCITY X scroll-driven automotive website"
-   ```
-2. Create a new repository on GitHub (e.g., `velocity-x` or `car-scroll-animation`).
-3. Link your remote repository and push:
-   ```bash
-   git remote add origin https://github.com/<YOUR-USERNAME>/<REPO-NAME>.git
+   git remote add origin https://github.com/princekushwah2611/VELOCITY-X.git
    git branch -M main
    git push -u origin main
    ```
 
 ### Step 2: Enable GitHub Pages in Repository Settings
 
-1. On GitHub, navigate to **Settings** > **Pages**.
+1. On GitHub, navigate to **Settings** > **Pages** of [`princekushwah2611/VELOCITY-X`](https://github.com/princekushwah2611/VELOCITY-X).
 2. Under **Build and deployment** > **Source**, select:
    - **GitHub Actions**
 3. The `.github/workflows/deploy.yml` workflow will automatically trigger on push to `main`.
 4. Once completed, your live site will be available at:
    ```text
-   https://<YOUR-USERNAME>.github.io/<REPO-NAME>/
+   https://princekushwah2611.github.io/VELOCITY-X/
    ```
 
 ### Base Path Handling
